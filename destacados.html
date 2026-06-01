@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Libros de programación destacados por la comunidad.">
+    <title>TechBooks - Destacados</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1 class="logo">TechBooks</h1>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="destacados.html" class="active">Destacados</a></li>
+                    <li><a href="listado.html">Listado de Libros</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container">
+        <section class="page-header">
+            <h2>Libros Destacados</h2>
+            <p>Haz clic en los libros para marcarlos o desmarcarlos como favoritos (Ejemplo de uso de <code>classList.toggle</code>).</p>
+        </section>
+
+        <!-- Esta sección se renderizará o manipulará desde JavaScript -->
+        <div class="grid-container" id="destacados-container">
+            <!-- Los elementos se crearán estáticamente aquí y el JS añadirá los eventos -->
+            <article class="card card-destacado">
+                <div class="card-content">
+                    <h3>Clean Code</h3>
+                    <p class="author">Robert C. Martin</p>
+                    <p>Una guía esencial para escribir código limpio, mantenible y legible.</p>
+                </div>
+                <button class="btn btn-outline btn-toggle-fav">❤ Marcar Favorito</button>
+            </article>
+
+            <article class="card card-destacado">
+                <div class="card-content">
+                    <h3>JavaScript: The Good Parts</h3>
+                    <p class="author">Douglas Crockford</p>
+                    <p>Descubre las mejores características de JS para escribir mejor software.</p>
+                </div>
+                <button class="btn btn-outline btn-toggle-fav">❤ Marcar Favorito</button>
+            </article>
+
+            <article class="card card-destacado">
+                <div class="card-content">
+                    <h3>Design Patterns</h3>
+                    <p class="author">GoF</p>
+                    <p>Patrones de diseño orientados a objetos reutilizables.</p>
+                </div>
+                <button class="btn btn-outline btn-toggle-fav">❤ Marcar Favorito</button>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 TechBooks - Trabajo Práctico 2 - Programación Web</p>
+    </footer>
+
+    <script src="destacados.js"></script>
+</body>
+</html>
