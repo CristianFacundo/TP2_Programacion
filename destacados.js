@@ -1,5 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
     const favButtons = document.querySelectorAll('.btn-toggle-fav');
+    const spanContador = document.getElementById('contador-seleccionados');
+
+    const actualizarContador = () => {
+        const seleccionados = document.querySelectorAll('.card-destacado.is-favorite').length;
+        spanContador.textContent = seleccionados;
+    };
 
     favButtons.forEach(button => {
         button.addEventListener('click', function() {
@@ -12,6 +18,8 @@ document.addEventListener('DOMContentLoaded', () => {
             } else {
                 this.textContent = '❤ Marcar Favorito';
             }
+
+            actualizarContador();
         });
     });
 });
