@@ -228,3 +228,17 @@ footer {
     padding: 2rem;
     margin-top: auto;
 }
+
+.floating-counter {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 25px;
+    border-radius: 50px;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 10px 15px -3px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
