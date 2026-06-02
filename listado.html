@@ -3,8 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Listado completo de libros de programación filtrables por categoría.">
-    <title>TechBooks - Catálogo Completo</title>
+    <title>Listado</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -13,12 +12,12 @@
 <body>
     <header>
         <div class="header-container">
-            <h1 class="logo">TechBooks</h1>
+            <h1 class="logo">Trabajo Práctico 2</h1>
             <nav>
                 <ul class="nav-links">
                     <li><a href="index.html">Inicio</a></li>
                     <li><a href="destacados.html">Destacados</a></li>
-                    <li><a href="listado.html" class="active">Listado de Libros</a></li>
+                    <li><a href="listado.html" class="active">Listado</a></li>
                 </ul>
             </nav>
         </div>
@@ -27,7 +26,7 @@
     <main class="container">
         <section class="page-header">
             <h2>Catálogo Completo</h2>
-            <p>Utiliza los botones a continuación para filtrar los libros por categoría (Ejemplo de uso de <code>Array.filter</code>).</p>
+            <p>Utiliza los botones a continuación para filtrar los libros por categoría.</p>
         </section>
 
         <section class="filter-section">
@@ -37,14 +36,12 @@
             <button class="btn btn-filter" data-category="Arquitectura">Arquitectura</button>
         </section>
 
-        <!-- El contenido será inyectado por JavaScript aquí -->
         <div class="grid-container" id="listado-container">
-            <!-- Items generados dinámicamente -->
         </div>
     </main>
 
     <footer>
-        <p>&copy; 2026 TechBooks - Trabajo Práctico 2 - Programación Web</p>
+        <p>&copy; 2026 - Trabajo Práctico 2 - Programación Web</p>
     </footer>
 
     <script src="listado.js"></script>

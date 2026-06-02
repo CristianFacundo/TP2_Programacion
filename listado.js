@@ -1,4 +1,3 @@
-// Arreglo de objetos (libros)
 const libros = [
     { id: 1, titulo: "JavaScript Moderno", autor: "Juan Perez", categoria: "Frontend", desc: "Guía completa de ES6+." },
     { id: 2, titulo: "Node.js al Extremo", autor: "Maria Lopez", categoria: "Backend", desc: "Escalando aplicaciones con Node." },
@@ -12,9 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const contenedor = document.getElementById('listado-container');
     const botonesFiltro = document.querySelectorAll('.btn-filter');
 
-    // Función para renderizar los libros en el DOM
     const renderLibros = (librosMostrados) => {
-        // Limpiamos el contenedor
         contenedor.innerHTML = '';
 
         if (librosMostrados.length === 0) {
@@ -22,7 +19,6 @@ document.addEventListener('DOMContentLoaded', () => {
             return;
         }
 
-        // Iteramos para crear los elementos HTML
         librosMostrados.forEach(libro => {
             const article = document.createElement('article');
             article.className = 'card';
@@ -40,19 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    // Renderizamos todos los libros al inicio
     renderLibros(libros);
 
-    // Agregamos eventos a los botones de filtrado
     botonesFiltro.forEach(boton => {
         boton.addEventListener('click', (e) => {
-            // Manejo de clase active visual
             botonesFiltro.forEach(btn => btn.classList.remove('active'));
             e.target.classList.add('active');
 
             const categoria = e.target.getAttribute('data-category');
 
-            // Lógica de filtrado usando array.filter
             if (categoria === 'Todos') {
                 renderLibros(libros);
             } else {

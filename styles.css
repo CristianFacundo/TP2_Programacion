@@ -1,22 +1,19 @@
-/* ==========================================================================
-   Variables y Configuración General
-   ========================================================================== */
 :root {
-    --primary-color: #4F46E5; /* Indigo */
+    --primary-color: #4F46E5;
     --primary-hover: #4338CA;
-    --secondary-color: #0F172A; /* Slate dark */
+    --secondary-color: #0F172A;
     --background-color: #F8FAFC;
     --card-bg: #FFFFFF;
     --text-main: #1E293B;
     --text-muted: #64748B;
     --border-color: #E2E8F0;
-    --accent-color: #10B981; /* Emerald for highlights */
+    --accent-color: #10B981;
 }
 
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Fundamental para el modelo de caja */
+    box-sizing: border-box;
 }
 
 body {
@@ -29,20 +26,17 @@ body {
     min-height: 100vh;
 }
 
-/* ==========================================================================
-   Header y Navegación (Uso de Flexbox y Box Model)
-   ========================================================================== */
 header {
     background-color: var(--card-bg);
     border-bottom: 1px solid var(--border-color);
-    padding: 1rem 0; /* Padding superior e inferior */
+    padding: 1rem 0;
     box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
 }
 
 .header-container {
     max-width: 1200px;
-    margin: 0 auto; /* Centrado horizontal con margin */
-    padding: 0 2rem; /* Padding lateral */
+    margin: 0 auto;
+    padding: 0 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -65,9 +59,9 @@ header {
     text-decoration: none;
     color: var(--text-main);
     font-weight: 600;
-    padding: 0.5rem 1rem; /* Padding dentro del enlace */
+    padding: 0.5rem 1rem;
     border-radius: 6px;
-    transition: all 0.3s ease; /* Micro-animación */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .nav-links a:hover,
@@ -76,14 +70,11 @@ header {
     color: white;
 }
 
-/* ==========================================================================
-   Contenedores Principales (Box Model)
-   ========================================================================== */
 .container {
     max-width: 1200px;
-    margin: 2rem auto; /* Margin exterior */
+    margin: 2rem auto;
     padding: 0 2rem;
-    flex: 1; /* Para empujar el footer hacia abajo */
+    flex: 1;
 }
 
 .page-header {
@@ -106,50 +97,6 @@ header {
     font-size: 1.1rem;
 }
 
-/* ==========================================================================
-   Sección Hero (index.html)
-   ========================================================================== */
-.hero-section {
-    flex: 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 4rem 2rem;
-    background: linear-gradient(135deg, #F8FAFC 0%, #E2E8F0 100%);
-}
-
-.hero-content {
-    max-width: 800px;
-    padding: 3rem;
-    background: var(--card-bg);
-    border: 1px solid var(--border-color);
-    border-radius: 16px;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-}
-
-.hero-content h2 {
-    font-size: 3rem;
-    color: var(--secondary-color);
-    margin-bottom: 1.5rem;
-    line-height: 1.2;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
-    margin-bottom: 2.5rem;
-}
-
-.hero-buttons {
-    display: flex;
-    gap: 1rem;
-    justify-content: center;
-}
-
-/* ==========================================================================
-   Botones (Reutilizables y con Box Model)
-   ========================================================================== */
 .btn {
     display: inline-block;
     padding: 0.75rem 1.5rem;
@@ -159,11 +106,10 @@ header {
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .btn:hover {
-    transform: translateY(-2px);
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1);
 }
 
@@ -192,7 +138,6 @@ header {
     color: var(--primary-color);
 }
 
-/* Botones de Filtro (listado.html) */
 .filter-section {
     display: flex;
     justify-content: center;
@@ -212,13 +157,10 @@ header {
     border-color: var(--primary-color);
 }
 
-/* ==========================================================================
-   Grilla y Tarjetas (Cards)
-   ========================================================================== */
 .grid-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem; /* Espaciado entre elementos */
+    gap: 2rem;
     margin-bottom: 4rem;
 }
 
@@ -231,11 +173,10 @@ header {
     flex-direction: column;
     justify-content: space-between;
     box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
-    transition: all 0.3s ease;
+    transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 10px 15px -3px rgba(0,0,0,0.1);
     border-color: var(--primary-color);
 }
@@ -264,14 +205,13 @@ header {
     margin-bottom: 1rem;
 }
 
-/* Estado Destacado (manipulado via JS classList) */
 .card-destacado {
     border: 2px solid transparent;
 }
 
 .card-destacado.is-favorite {
     border-color: var(--accent-color);
-    background-color: #F0FDF4; /* Verde muy claro */
+    background-color: #F0FDF4;
     box-shadow: 0 0 15px rgba(16, 185, 129, 0.2);
 }
 
@@ -281,9 +221,6 @@ header {
     border-color: var(--accent-color);
 }
 
-/* ==========================================================================
-   Footer
-   ========================================================================== */
 footer {
     background-color: var(--secondary-color);
     color: #94A3B8;
